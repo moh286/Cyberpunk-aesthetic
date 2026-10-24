@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyberpunk Subscription Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cyber-container">
+      <header class="cyber-header">
+        <h1>CYBER<span>_SUBS</span> TRACKER</h1>
+        <p>نظام إدارة وتتبع الاشتراكات الشهرية والسنوية</p>
+      </header>
+
+      <!-- شريط الإحصائيات والميزانية -->
+      <section class="stats-card">
+        <div class="stat-box">
+          <span class="label">المجموع الشهري</span>
+          <h2 id="monthlyTotal">$0.00</h2>
+        </div>
+        <div class="stat-box">
+          <span class="label">المجموع السنوي</span>
+          <h2 id="yearlyTotal">$0.00</h2>
+        </div>
+        <div class="stat-box">
+          <span class="label">حد الميزانية الشهرية</span>
+          <input
+            type="number"
+            id="budgetInput"
+            value="100"
+            placeholder="حدد الميزانية"
+          />
+        </div>
+      </section>
+
+      <!-- شريط التقدم المالي -->
+      <div class="progress-bar-container">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <!-- نموذج إضافة اشتراك جديد -->
+      <form id="subForm" class="cyber-form">
+        <input
+          type="text"
+          id="subName"
+          placeholder="اسم الخدمة (مثلاً Netflix)"
+          required
+        />
+        <input
+          type="number"
+          id="subPrice"
+          step="0.01"
+          placeholder="السعر ($)"
+          required
+        />
+        <select id="subCycle">
+          <option value="monthly">شهري</option>
+          <option value="yearly">سنوي</option>
+        </select>
+        <button type="submit" class="cyber-btn">+ إضافة اشتراك</button>
+      </form>
+
+      <!-- قائمة الاشتراكات -->
+      <section class="list-section">
+        <h3>قائمة الاشتراكات النشطة (<span id="subCount">0</span>)</h3>
+        <ul id="subList" class="sub-list"></ul>
+        <button id="clearAllBtn" class="cyber-btn danger-btn">
+          تفريغ كل الاشتراكات 🗑️
+        </button>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

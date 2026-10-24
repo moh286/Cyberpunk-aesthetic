@@ -1,0 +1,201 @@
+:root {
+  --bg-color: #0b0c10;
+  --card-bg: #1f2833;
+  --neon-yellow: #f3ec19;
+  --neon-cyan: #00f0ff;
+  --text-color: #c5c6c7;
+  --danger-color: #ff0055;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cyber-container {
+  width: 100%;
+  max-width: 700px;
+  background: var(--card-bg);
+  border: 2px solid var(--neon-yellow);
+  box-shadow: 0 0 15px rgba(243, 236, 25, 0.2);
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.cyber-header h1 {
+  color: var(--neon-yellow);
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.cyber-header h1 span {
+  color: var(--neon-cyan);
+}
+
+.cyber-header p {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Stats */
+.stats-card {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0 10px 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: #111;
+  border: 1px solid #333;
+  padding: 12px;
+  flex: 1;
+  min-width: 130px;
+  border-radius: 5px;
+}
+
+.stat-box .label {
+  font-size: 0.8rem;
+  color: #aaa;
+  display: block;
+}
+
+.stat-box h2 {
+  margin: 5px 0 0 0;
+  color: var(--neon-cyan);
+}
+
+#budgetInput {
+  width: 80%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--neon-yellow);
+  color: var(--neon-yellow);
+  font-size: 1.2rem;
+  font-weight: bold;
+  outline: none;
+  margin-top: 5px;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background: #111;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--neon-cyan);
+  transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+/* Form */
+.cyber-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.cyber-form input, .cyber-form select {
+  background: #111;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.cyber-form input:focus, .cyber-form select:focus {
+  border-color: var(--neon-yellow);
+}
+
+#subName { flex: 2; min-width: 140px; }
+#subPrice { flex: 1; min-width: 90px; }
+#subCycle { flex: 1; min-width: 90px; }
+
+.cyber-btn {
+  background: var(--neon-yellow);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.cyber-btn:hover {
+  background: var(--neon-cyan);
+  box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.danger-btn {
+  background: transparent;
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+  margin-top: 15px;
+  width: 100%;
+}
+
+.danger-btn:hover {
+  background: var(--danger-color);
+  color: #fff;
+  box-shadow: 0 0 10px var(--danger-color);
+}
+
+/* Subscriptions List */
+.sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sub-item {
+  background: #111;
+  border-right: 4px solid var(--neon-yellow);
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.sub-info strong {
+  color: #fff;
+  display: block;
+}
+
+.sub-info span {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.sub-price {
+  font-weight: bold;
+  color: var(--neon-cyan);
+  margin-left: 15px;
+}
+
+.del-btn {
+  background: none;
+  border: none;
+  color: var(--danger-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
